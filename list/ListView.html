@@ -1,0 +1,56 @@
+<div ng-controller="ListController"  >
+
+    <div class="card-content" >
+        <div class="row ">
+
+            <div class="col s9 left">
+                <input class="input-field  flow-text" type="search" ng-model="query" placeholder="Type book title here..">
+            </div>
+            <div class="col s3" >
+                <a class="waves-effect waves-ripple  btn-flat right" style="margin-top: 1%"
+                   ng-click="getQuery(query)" ng-disabled ="query == ''" >Search</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div ng-if ='status==0' class="center-block center">
+        <strong class="red-text lighten-1 flow-text">{{message}}</strong>
+    </div>
+
+	<div class="card" ng-repeat="book in books" ng-if ='status==200'>
+
+        <div class="card-content">
+            <div class="row">
+                <div class="col s12 center-block center">
+                    <blockquote class="card-title orange-text lighten-1 accent-3">
+                       <strong>{{book.Title}}</strong>
+                    </blockquote>
+                </div>
+                <div class="col s4">
+                    <picture class="center-block center">
+                        <img  ng-src={{book.Image}}>
+                    </picture>
+                </div>
+                <div class="col s8 text-justify">
+                    <p class="grey-text darken-1" >
+                        <blockquote class="orange-text lighten-1 accent-3">{{book.SubTitle}}</blockquote>
+                        <p>
+                            {{book.Description}}
+                        </p>
+                        <p>
+                            <span class="orange-text lighten-1 accent-3">Isbn </span> {{ book.isbn }}
+                        </p>
+
+                    <p/>
+                </div>
+            </div>
+        </div>
+        <div class="card-action right">
+            <a  ng-href="#/Details/:{{book.ID}}" target="_blank">Download</a></p>
+        </div>
+	</div>
+    <div class="center-block" ng-if="TotalPages > 0">
+        <a class="waves-effect waves-ripple  btn-flat bottom" ng-click="getByPage(query)">Load More..</a>
+    </div>
+</div>
