@@ -2,11 +2,11 @@ angular.module('bookSpaceApp')
         .controller("ListController",['$scope','bookFactory',fnListController])
         .run();
 
-function fnListController($scope,bookFactory){
-
+function fnListController($scope,bookFactory,cfpLoadingBar){
 
     $scope.getQuery =function(inputQuery)
     {
+
 
         bookFactory.getBooks(inputQuery)
             .then(function(response){
@@ -30,10 +30,13 @@ function fnListController($scope,bookFactory){
                         $scope.TotalPages = paging + 1;
                         $scope.CurrentPage =1;
                     }
+
                     $scope.books =response.data.Books;
                 }
 
-            })
+            });
+
+
     };
     $scope.getByPage =function (inputQuery){
         $scope.CurrentPage++;

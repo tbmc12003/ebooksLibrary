@@ -5,25 +5,16 @@ function routeConfiguration($routeProvider){
 
     $routeProvider
         .when('/',{
-            templateUrl:'login/LogInView.html',
-            controller:'LoginController'
-        })
-        .when('/Login',{
-            templateUrl:'login/LogInView.html',
-            controller:'LoginController'
-        })
-        .when('/List',{
             templateUrl:'list/ListView.html',
             controller:'ListController'
         })
-        .when('/Details',{
-            templateUrl:'details/DetailsView.html',
-            controller:'DetailsController'
+        .when('/Policy',{
+            templateUrl:'privacy-policy.html'
         })
         .when('/404',{
             templateUrl:'404.html'
         })
         .otherwise({
-            redirectTo:'/'
+            redirectTo:'/404'
         });
 }

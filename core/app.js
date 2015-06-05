@@ -1,11 +1,14 @@
-(function(){
+
+$(document).ready(function(){
     //adds copy right statement
-    $('#copyRight').html('© copyright ' + (new Date()).getFullYear());
+    var copyRightYear =(new Date()).getFullYear();
+    $('.copyRight').html('© brahma 2014-' + copyRightYear);
 
+});
 
-    angular.module('bookSpaceApp',['appRoutes'])
+/*Immediately invoked function expression*/
+(function(){
+    angular.module('bookSpaceApp',['appRoutes','ngCookies','ngAnimate'])
         .constant('env','live')
         .constant('baseApi','http://it-ebooks-api.info/v1/search/');
-
-
 })();

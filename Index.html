@@ -7,26 +7,42 @@
 
     <meta charset="UTF-8">
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Google site verification Meta-->
-    <meta name="google-site-verification" content="zbDtpRYsTzVfwORt6UFhRV6MGEl3JPoSosqmDKQOosQ" />
 
+    <meta name ="google-site-verification" content="zbDtpRYsTzVfwORt6UFhRV6MGEl3JPoSosqmDKQOosQ" >
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="657825873527-i353vds7mopn24oaq468j6f3sencb4fd.apps.googleusercontent.com">
 
-    <!--Dev:Start-->
-    <link href="node_modules/materialize-css/dist/materialize.css" type="text/css" rel="stylesheet">
-    <link href="assets/main.css" type="text/css" rel="stylesheet">
 
     <!-- Jquery js libraries -->
     <script src="node_modules/jquery/dist/jquery.js"></script>
 
+    <!--Google oauth-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+
+    <link href="node_modules/materialize-css/dist/materialize.css" type="text/css" rel="stylesheet">
+    <link href="assets/main.css" type="text/css" rel="stylesheet">
+
+
     <script src="node_modules/materialize-css/dist/materialize.js"></script>
+
 
     <!-- Angular js libraries -->
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-resource/angular-resource.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
-    <!--Dev:Ends-->
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.js"></script>
+
+
+
+    <!--angular loading bar -->
+    <link href="node_modules/angular-loading-bar/build/loading-bar.css" type="text/css" rel="stylesheet">
+    <script src="node_modules/angular-loading-bar/build/loading-bar.js"></script>
 
     <!-- Application libraries -->
     <script src="core/app.js"></script>
@@ -37,34 +53,37 @@
     <script src="details/DetailsController.js"></script>
     <script src="login/LoginController.js"></script>
 </head>
-<body ng-app="bookSpaceApp">
+<body>
+    <div class="" ng-app="bookSpaceApp">
 
-    <div class="container">
-        <header>
+        <header class="navbar-fixed">
             <nav class="grey darken-2 accent-3"  role="navigation" >
                 <div class="nav-wrapper" >
                     <ul>
-                        <li><a href="#/List">List</a></li>
-                        <li><a href="#/Details" >Details</a></li>
-                        <li><a href="#/404">404</a></li>
-
-                        <li class="right">
-                            <a  href="#/Login">Sign In</a></li>
+                        <li><a href="#/" ng-class="active" >Home</a></li>
+                        <li class="right" style="margin-right: 2em">
+                            <a href="#/404">Sign In</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </header>
 
+
+
         <div>
             <ng-view></ng-view>
         </div>
 
-        <footer class="z-depth-3">
-
-            <div class="footer-copyright ">
-                <small id="copyRight" class="right"></small>
+        <div class="foot-bottom">
+            <div class="footer-nav">
+                <ul>
+                    <li ><a href="#/Policy" >Privacy Policy</a></li>
+                    <li class="right copyRight">copy right 2015</li>
+                </ul>
             </div>
-        </footer>
+
+        </div>
     </div>
 </body>
 </html>
