@@ -1,18 +1,5 @@
 <div ng-controller="LoginController">
 
-    <div class="card" ng-show="env==live">
-
-
-    </div>
-    <!--
-        the section below gets displayed only if env is set to demo,
-        it can use to test the controllers etc. quickly without modifying the
-        section above.
-    -->
-    <div class="card purple lighten-4 accent-3" ng-show="env==demo">
-        <p>
-            This is the Login view, and here is the message form controller
-            <br><blockquote><strong>{{ message }}</strong></blockquote>
-        </p>
-    </div>
+    <button class="btn" ng-click=createCookies('eBookLibrary',{'email':'tbmc12003@gmail.com'},7)>Create Cookie</button>
+    <button class="btn" ng-click=readCookies('eBookLibrary')>Read Cookie</button>
 </div>
