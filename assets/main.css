@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width:100%;
+}
+
+.wrapper{
+    min-height: 100%;
+    max-width: 100%;
+    position: absolute;
+}
+.body-content{
+    max-width: 100%;
+    min-height: 100%;
+}
+.foot-bottom{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    background-color: #222222;
+    overflow: hidden;
+}
+
+.footer-nav>ul {
+    list-style: none;
+    background-color: #444;
+    text-align: justify;
+    padding: 0;
+    margin: 0;
+}
+.footer-nav li {
+    margin: 10px;
+}
+
+.footer-nav a.active {
+    cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+    .footer-nav li {
+        border-bottom: none;
+        font-size: small;
+    }
+
+    /* Option 1 - Display Inline */
+    .footer-nav li {
+        display: inline-block;
+        margin-right: -4px;
+    }
+}

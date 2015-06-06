@@ -1,5 +1,9 @@
 /.idea/**
+<<<<<<< HEAD
 
+=======
+/node_modules/**
+>>>>>>> origin/master
 #################
 ## Eclipse
 #################
