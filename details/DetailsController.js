@@ -1,7 +1,7 @@
 angular.module('bookSpaceApp').controller("DetailsController",['$scope','$routeParams','bookFactory' ,fnDetailsController] );
 
 function fnDetailsController($scope,$routeParams,bookFactory){
-    $scope.message='Hello this is DetailsController';
+
     var bookId =$routeParams.ID.replace(':','').trim();
 
     bookFactory.getBookById(bookId)
@@ -11,7 +11,7 @@ function fnDetailsController($scope,$routeParams,bookFactory){
             $scope.status =response.status;
             if (response.data.Error != '0'){
                 $scope.status="0";
-                $scope.message='Sorry, something is not working, please try again later';
+                $scope.message='Sorry, book details not available right now, please try again later';
             }
             else
             {
