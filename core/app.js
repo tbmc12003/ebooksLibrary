@@ -2,7 +2,7 @@
 $(document).ready(function(){
     //adds copy right statement
     var copyRightYear =(new Date()).getFullYear();
-    $('.copyRight').html('© brahma 2014-' + copyRightYear);
+    $('.copyRight').html('© brahma 2014-' + copyRightYear + ' beta edition');
 
 });
 
