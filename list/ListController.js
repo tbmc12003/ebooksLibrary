@@ -1,8 +1,7 @@
 angular.module('bookSpaceApp')
-        .controller("ListController",['$scope','bookFactory',fnListController])
-        .run();
+        .controller("ListController",['$scope','bookFactory',fnListController]);
 
-function fnListController($scope,bookFactory,cfpLoadingBar){
+function fnListController($scope,bookFactory){
 
     $scope.getQuery =function(inputQuery)
     {

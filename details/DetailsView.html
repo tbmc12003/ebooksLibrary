@@ -1,18 +1,35 @@
 <div ng-controller="DetailsController">
 
-    <div class="card" ng-show="env==live">
-
-
-    </div>
-    <!--
-        the section below gets displayed only if env is set to demo,
-        it can use to test the controllers etc. quickly without modifying the
-        section above.
-    -->
-    <div class="card orange lighten-4 accent-3" ng-show="env==demo">
+    <div ng-if ='status==0' class="center-block center">
+        <strong class="red-text lighten-1 flow-text">
+            {{message}}
+        </strong>
         <p>
-            This is the details view, and here is the message form controller
-            <br><blockquote><strong>{{ message }}</strong></blockquote>
+            <a ng-href="#/List">back to search</a>
         </p>
+    </div>
+
+    <div class="card" ng-if ='status==200'>
+        <div class="row">
+            <div class="col s3">
+
+            </div>
+            <div class="col s9">
+              <table>
+                  <tr>
+                      <td>Title</td>
+                      <td>{{book.Title}}</td>
+                  </tr>
+                  <tr>
+                      <td>Author</td>
+                      <td>{{book.Author}}</td>
+                  </tr>
+                  <tr>
+                      <td>Author</td>
+                      <td>{{book.Description}}</td>
+                  </tr>
+              </table>
+            </div>
+        </div>
     </div>
 </div>

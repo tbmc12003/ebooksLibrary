@@ -1,6 +1,4 @@
-/**
- * Created by Sujoy on 5/27/2015.
- */
+
 angular.module('bookSpaceApp')
                         .factory('bookFactory',['$http','$q','$timeout','baseApi',bookServiceConfiguration]);
 
@@ -27,6 +25,11 @@ function bookServiceConfiguration($http,$q,$timeout,baseApi) {
     dataFactory.getBooksByPage = function (query, pageNumber) {
         var apiUrl=baseApi + query + '/page/' + pageNumber;
         return $http.get(apiUrl);
+    };
+
+    dataFactory.getBookById =function(id){
+        var apiUri='http://it-ebooks-api.info/v1/book/'+ id;
+        return $http.get(apiUri);
     };
     return dataFactory;
 }

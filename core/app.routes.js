@@ -8,6 +8,14 @@ function routeConfiguration($routeProvider){
             templateUrl:'list/ListView.html',
             controller:'ListController'
         })
+        .when('/List',{
+            templateUrl:'list/ListView.html',
+            controller:'ListController'
+        })
+        .when('/Details/:ID',{
+            templateUrl:'details/DetailsView.html',
+            controller:'DetailsController'
+        })
         .when('/Policy',{
             templateUrl:'privacy-policy.html'
         })
