@@ -49,3 +49,9 @@ body{
         margin-right: -4px;
     }
 }
+
+.pad-right-left{
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: 0.5em;
+}
