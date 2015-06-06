@@ -5,8 +5,7 @@ function routeConfiguration($routeProvider){
 
     $routeProvider
         .when('/',{
-            templateUrl:'list/ListView.html',
-            controller:'ListController'
+            templateUrl:'site-maintenance.html'
         })
         .when('/List',{
             templateUrl:'list/ListView.html',
