@@ -11,4 +11,6 @@ $(document).ready(function(){
     angular.module('bookSpaceApp',['appRoutes','ngCookies','ngAnimate'])
         .constant('env','live')
         .constant('baseApi','http://it-ebooks-api.info/v1/search/');
+
+
 })();

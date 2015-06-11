@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 
-<head lang="en">
+<head>
 
     <title>ebook Library</title>
 
@@ -10,9 +10,10 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="free ebooks library from it-books.info">
+    <meta name="keywords" content="free,ebooks,IT books, technical books">
 
     <!--Google site verification Meta-->
-
     <meta name ="google-site-verification" content="zbDtpRYsTzVfwORt6UFhRV6MGEl3JPoSosqmDKQOosQ" >
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="657825873527-i353vds7mopn24oaq468j6f3sencb4fd.apps.googleusercontent.com">
@@ -57,7 +58,6 @@
 
         ga('create', 'UA-63096172-2', 'auto');
         ga('send', 'pageview');
-
     </script>
     <!-- End Google Analytics -->
 
@@ -66,28 +66,30 @@
 <body>
     <div class="" ng-app="bookSpaceApp">
 
-        <header class="navbar-fixed">
-            <nav class="grey darken-2 accent-3"  role="navigation" >
-                <div class="nav-wrapper" >
-                    <ul>
-                        <li><a href="#/List" ng-class="active" >Home</a></li>
-                        <li class="right">
-                            <a href="#/404" style="margin-right: 2em">Sign In</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+
+                <header class="navbar-fixed">
+                    <nav class="grey darken-2 accent-3"  role="navigation" >
+                        <div class="nav-wrapper" >
+                            <ul>
+                                <li><a href="#/List" ng-class="active" >Home</a></li>
+                                <li class="right">
+                                    <a href="#/404" style="margin-right: 2em">Sign In</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
         </header>
+
         <div>
             <ng-view></ng-view>
+
         </div>
 
         <div class="foot-bottom">
             <div class="footer-nav">
-                <ul>
-                    <li class="left pad-right-left"><a href="#/Policy" >Privacy Policy</a></li>
-                    <li class="right white-text  pad-right-left copyRight">copy right 2015</li>
-                </ul>
+                <a class="left pad-right-left" href="#/Policy" >Privacy Policy</a>
+                <div class="right white-text  pad-right-left copyRight">copy right 2015</div>
             </div>
 
         </div>

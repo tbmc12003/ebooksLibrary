@@ -16,7 +16,7 @@ function fnDetailsController($scope,$routeParams,bookFactory){
             else
             {
                 $scope.status="200";
-                $scope.book =response.data.book;
+                $scope.book =response.data;
             }
 
         })

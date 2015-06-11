@@ -31,6 +31,8 @@ function bookServiceConfiguration($http,$q,$timeout,baseApi) {
         var apiUri='http://it-ebooks-api.info/v1/book/'+ id;
         return $http.get(apiUri);
     };
+
+
     return dataFactory;
 }
 

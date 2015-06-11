@@ -49,5 +49,6 @@ function fnListController($scope,bookFactory){
         }
 
 
-    }
+    };
+
 }

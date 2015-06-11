@@ -9,30 +9,81 @@
         </p>
     </div>
 
-    <div class="card" ng-if ='status==200'>
-        <div class="row">
-            <div class="col s3">
-                <picture>
-                    <source src={{book.Image}}>
-                    <img >
-                </picture>
+    <div class="pad-right-left"  ng-if ='status==200'>
+        <div class="card" >
+            <div class="row">
+                <div class="col s2">
+                    <picture class="img-responsive">
+                        <source   >
+                        <img ng-src="{{book.Image}}" class="thumb" >
+                    </picture>
+                </div>
+                <div class="col s9">
+
+                    <section>
+                        <div>
+                            <table>
+                                <thead>
+                                <hgroup class="orange-text accent-3 text-justify">
+                                    <h5>{{book.Title}}</h5>
+                                    <h6>{{book.SubTitle}}</h6>
+                                </hgroup>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td  colspan="2">
+                                            <h6>Book Description</h6>
+                                            <p class="grey-text text-justify">
+                                                {{book.Description}}
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Author</td>
+                                        <td class="grey-text text-justify">{{book.Author}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Publisher</td>
+                                        <td class="grey-text text-justify">{{book.Publisher}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Year of Publication</td>
+                                        <td class="grey-text text-justify">{{book.Year}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Pages</td>
+                                        <td>{{book.Page}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Download</td>
+                                        <td> <a ng-href="{{book.Download}}" target="_blank">
+                                            Download With FilePi.com</a>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Buy</td>
+                                        <td> <a target="_blank"
+                                                ng-href="https://play.google.com/store/search?q={{ book.ISBN }}&c=books">Available on play Store</a>
+                                            
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </section>
+                </div>
             </div>
-            <div class="col s9">
-              <table>
-                  <tr>
-                      <td>Title</td>
-                      <td>{{book.Title}}</td>
-                  </tr>
-                  <tr>
-                      <td>Author</td>
-                      <td>{{book.Author}}</td>
-                  </tr>
-                  <tr>
-                      <td>Author</td>
-                      <td>{{book.Description}}</td>
-                  </tr>
-              </table>
-            </div>
+
+
+            <!--
+
+
+            -->
         </div>
     </div>
 </div>
