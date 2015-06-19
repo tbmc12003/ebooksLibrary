@@ -6,8 +6,7 @@ function fnDetailsController($scope,$routeParams,bookFactory){
 
     bookFactory.getBookById(bookId)
         .then(function(response){
-            console.log(response);
-
+            
             $scope.status =response.status;
             if (response.data.Error != '0'){
                 $scope.status="0";
