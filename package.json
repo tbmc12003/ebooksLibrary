@@ -1,0 +1,33 @@
+{
+  "name": "ebooksLibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.3.15",
+    "angular-loading-bar": "^0.7.1",
+    "angular-resource": "^1.3.15",
+    "angular-cookies": "^1.4.0",
+    "angular-route": "^1.3.15",
+    "angular-animate": "^1.3.15",
+    "bootstrap": "^3.3.4",
+    "materialize-css": "^0.96.1",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbmc12003/ebooksLibrary.git"
+  },
+  "author": "dassujoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tbmc12003/ebooksLibrary/issues"
+  },
+  "homepage": "https://github.com/tbmc12003/ebooksLibrary"
+}
